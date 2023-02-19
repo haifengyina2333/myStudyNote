@@ -1,0 +1,101 @@
+.bigbox {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.bigbox .biaoti {
+  color: #fff;
+  font-size: 42px;
+  font-weight: 700;
+}
+.bigbox .login {
+  margin-top: 25px;
+  width: 400px;
+  height: 400px;
+  background-color: rgba(135, 206, 235, 0.4);
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(25px);
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 18px;
+  font-size: 28px;
+}
+.bigbox .login .title {
+  color: #fff;
+}
+.bigbox .login .srk {
+  margin-top: 20px;
+  padding: 15px 50px 15px ;
+  text-align: left;
+  border-radius: 20px;
+}
+.bigbox .login .srk p {
+  color: #fff;
+  font-size: 20px;
+  margin-top: 15px;
+}
+.bigbox .login .srk input {
+  margin-top: 10px;
+  border: 0px;
+  border-radius: 10px;
+  width: 290px;
+  height: 35px;
+  padding-left: 10px;
+  font-size: 20px;
+  outline: none;
+  background-color: rgba(135, 206, 235, 0.8);
+  color: black;
+}
+.bigbox .login .wjmm {
+  position: relative;
+  left: 200px;
+  color: skyblue;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+.bigbox .login .wjmm:hover {
+  color: #fff;
+}
+.bigbox .login .ts {
+  display: none;
+  position: absolute;
+  font-size: 22px;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  transition: all 0.3s;
+}
+.bigbox .login input {
+  width: 100px;
+  height: 50px;
+  font-size: 26px;
+  background-color: #1677b3;
+  border-radius: 10px;
+  color: #fff;
+  border: 0px;
+  transition: all 0.3s;
+}
+.bigbox .login input:hover {
+  filter: grayscale(45%);
+}
+.bigbox .login button {
+  margin-left: 50px;
+  width: 100px;
+  height: 50px;
+  font-size: 26px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  border: 0px;
+  transition: all 0.3s;
+}
+.bigbox .login button:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.bigbox .login button a {
+  color: #fff;
+}

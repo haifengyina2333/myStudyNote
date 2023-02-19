@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            position: relative;
+            left: 0px;
+            height:200px;
+            width:200px;
+            background-color: skyblue;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div>我免费了</div>
+    <script>
+        var div = document.querySelector('div');
+        var times = setInterval(function(){
+            if(div.offsetLeft >= 1700){
+                // clearInterval(times);
+                div.style.left = 0 + 'px';
+            }
+            div.style.left = div.offsetLeft + 2 + 'px';
+        },25)
+    </script>
+</body>
+</html>

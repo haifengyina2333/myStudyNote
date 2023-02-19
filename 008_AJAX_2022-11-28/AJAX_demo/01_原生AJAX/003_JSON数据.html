@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nr {
+            width: 500px;
+            height: 500px;
+            border: 2px solid skyblue;
+            background-color: #c8adc4;
+            padding: 20px;
+            font-size: 24px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="nr" id="nr"></div>
+    <script>
+        // 获取元素对象
+        const div =  document.querySelector('.nr');
+
+        div.addEventListener("mouseover",function(){
+            console.log('1');
+            // 创建对象
+            const xhr = new XMLHttpRequest();
+            //自动转换 设置响应体数据类型
+            xhr.responseType = 'json';
+            // 初始化
+            xhr.open('GET','http://127.0.0.1:8001/Json-server');
+            // 发送
+            xhr.send();
+            // 事件绑定
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState === 4 ){
+                    if(xhr.status >= 200 && xhr.status < 300){
+                        // 处理服务端的返回结果
+
+                        // 手动数据转换
+                        // let date = JSON.parse(xhr.response);
+                        // div.innerHTML = date.name;
+
+                        // 自动转换的代码
+                        div.innerHTML = xhr.response.name;
+                        console.log(xhr.response);
+
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

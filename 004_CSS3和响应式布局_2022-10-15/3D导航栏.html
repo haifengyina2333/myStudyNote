@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            /* perspective: 1000px; */
+            text-decoration: none;
+        }
+        a{
+            color: black;
+        }
+        ul{
+           
+            width: 600px;
+            margin: 100px auto;
+            list-style: none;
+            height: 80px;
+        }
+        ul li{ 
+            position: relative;
+            display: block;
+            float: left;
+            width: 120px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            /* 3D 模式 */
+            transform-style: preserve-3d;
+            /* 观察使用 */
+            /* transform: rotateY(60deg) rotateZ(-20deg); */
+            transition: all 0.5s;
+        }
+        .one{
+            display: block;
+            height: 100%;
+            width: 100%;
+            background-color: pink;
+            transform: translateZ(20px);
+        }
+        .two{
+            position: absolute;
+            display: block;
+            height: 100%;
+            width: 100%;
+            top: 40px;
+            background-color: #428675;
+            transform: rotateX(90deg) translateZ(60px);
+
+        }
+        ul li:hover {
+            transform: rotateX(-90deg);
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="" class="one">首页</a>
+            <a href="" class="two">home</a>
+        </li>
+        <li>
+            <a href="" class="one">支持</a>
+            <a href="" class="two">abous</a>
+        </li>
+        <li>
+            <a href="" class="one">联系我们</a>
+            <a href="" class="two">call me</a>
+        </li>
+
+    </ul>
+</body>
+</html>

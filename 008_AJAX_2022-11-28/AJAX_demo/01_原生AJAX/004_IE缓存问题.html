@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            width: 250px;
+            height: 50px;
+            border-radius: 10px;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .nr{
+            width: 500px;
+            height: 500px;
+            border: 2px solid skyblue;
+            background-color: #c8adc4;
+            padding: 20px;
+            font-size: 24px;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <button>
+         发送请求
+    </button>
+    <div class="nr" id="nr"></div>
+    <script>
+        const btn = document.querySelector('button')
+        const div = document.querySelector('.nr');
+
+        btn.addEventListener('click',function(){
+            console.log("我被点击了");
+            const xhr = new XMLHttpRequest();
+            //因为Ie会走缓存，给下面的URL添加这个( ?t=' + Date.now())，解决缓存问题，
+            xhr.open("GET",'http://127.0.0.1:8001/ie?t=' + Date.now());
+            xhr.send();
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState == 4){
+                    if(xhr.status  >= 200 && xhr.readyState < 300)
+                    div.innerHTML = xhr.response;
+                }
+            }
+
+        })
+    </script>
+</body>
+</html>

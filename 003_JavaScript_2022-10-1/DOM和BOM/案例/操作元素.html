@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            height: 1000px;
+        }
+        body{
+            height: 1000px;
+        }
+        input{
+            width: 300px;
+            height: 50px;
+            border: 2px solid #fff;
+            border-bottom: 2px solid black;
+            font-size: 18px;
+            color: #ccc;
+             /* 取消选中的框 */
+            outline: none;
+            
+        }
+        .DIV2_1{
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 80px;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 80px;
+            font-size: 40px;
+            /* 溢出不显示 */
+            overflow:hidden;
+        }
+        .DIV2_2{
+            position: relative;
+            left: 30%;
+            bottom: 35%;
+            border: none;
+            background-color: #fff;
+        }
+        .nice{
+            position: relative;
+            top: -115px;
+        }
+        ul{
+            margin-top: 100px;
+            /* 取消无序列表符号 */
+            list-style: none;
+            width: 100%;
+            height: 50px;
+        
+           
+        }
+        ul li{
+            float: left;
+            margin-left: 20px;
+            width: 100px;
+            text-align: center;
+            height: 50px;
+            line-height: 50px;
+        }
+        ul li:hover{
+            background-color:aquamarine;
+        }
+        ul li a{
+            /* 去掉下划线 */
+            text-decoration: none;
+            color: black;
+        }
+        .li_1{
+            position: relative;
+            left: 60px;
+            width: 100px;
+            text-align: center;
+            height: 0px;
+            overflow:hidden;
+        }
+        .li_2{
+            list-style: none;
+            
+        }
+        .a_2{
+            text-decoration: none;
+            color: black;
+        }
+       
+    </style>
+</head>
+<body id="body">
+    登录案例 <br> <hr>
+    用户名：<input type="text" value="林北的邮箱">
+<br><hr>
+广告案例：
+<div class="DIV2_1" id="DIV2_1">我是大广告
+    <button class="DIV2_2" id="DIV2_2">X</button>
+
+</div>
+<button class="nice" id="nice">开关灯/夜间模式</button>
+<ul>
+    <li id="lilili"><a href="">首页</a></li>
+    <li><a href="">产品1</a></li>
+    <li><a href="">产品2</a></li>
+    <li><a href="">产品3</a></li>
+    <li><a href="">关于我们</a></li>
+    
+</ul>
+<div class="li_1" id="li_1">
+    <li class="li_2"><a href="" class="a_2">1</a></li>
+    <li class="li_2"><a href="" class="a_2">2</a></li>
+    <li class="li_2"><a href="" class="a_2">3</a></li>
+    <li class="li_2"><a href="" class="a_2">4</a></li>
+  
+</div>
+
+
+
+
+    <script>
+        var inp = document.querySelector('input');
+        inp.onfocus = function(){
+            if(inp.value == '林北的邮箱'){
+                inp.value = '';
+                inp.style.color = '#66c18c';
+            }
+        }
+        inp.onblur = function(){
+            if(inp.value == ''||inp.value == ' '){
+                inp.value = '林北的邮箱';
+                inp.style.color = '#ccc';
+            }
+        }
+        var kill = document.getElementById('DIV2_2');
+        var no = document.getElementById('DIV2_1');
+        kill.onclick = function(){
+            //no.style.display = 'none';
+            no.style.height = '0px';
+        }
+        var nice = document.getElementById('nice');
+        var body = document.getElementById('body');
+        var x = 0;
+        nice.onclick = function(){
+            if( x == 0){
+                body.style.backgroundColor = '#a4aca7';
+                x = 1;
+            }else{
+                body.style.backgroundColor = '#fff';
+                x = 0;
+            }
+        }
+    var li = document.getElementById('lilili');
+    var lili = document.getElementById('li_1');
+    li.onfocus = function(){
+        lili.style.height = '100px';
+        lili.style.overflow = 'auto';
+    }
+    </script>
+</body>
+</html>

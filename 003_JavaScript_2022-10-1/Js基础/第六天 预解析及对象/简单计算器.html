@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function gnxz(){
+    while(true){
+    var gn = prompt('简单计算器\n1.加法运算\n2.减法运算\n3.乘法运算\n4.除法运算\n5.退出');
+    switch(gn){
+        case '1' :jjys();braek;
+        case '2' :jfys();break;
+        case '3' :cfys();break;
+        case '4' :cccc();break;
+        case '5': end();break;
+        default:gnxz();
+        }
+    }
+}
+gnxz();
+//功能实现区
+function jjys(){
+    var num1 = parseInt(prompt('请你输入要加的数字'));
+    var num2 = parseInt(prompt('请你输入的第二个数字'));
+    alert('如果'+ num1 + '+' +num2 + '=' + (num1 + num2));
+    gnxz();
+}
+function jfys(){
+    var num1 = parseInt(prompt('请你输入被减数'));
+    var num2 = parseInt(prompt('请你输入减数'));
+    alert('如果'+ num1 + '-' +num2 + '=' + (num1 - num2));
+    gnxz();
+}
+function cfys(){
+    var num1 = parseInt(prompt('请你输入乘数'));
+    var num2 = parseInt(prompt('请你输入另一个乘数'));
+    alert('如果'+ num1 + '*' +num2 + '=' + (num1 * num2));
+    gnxz();
+}
+function cccc(){
+    var num1 = parseInt(prompt('请你输入被除数'));
+    var num2 = parseInt(prompt('请你输入除数'));
+    alert('如果'+ num1 + '/' +num2 + '=' + (num1 / num2));
+    gnxz();
+}
+</script>
+<body>
+    
+</body>
+</html>

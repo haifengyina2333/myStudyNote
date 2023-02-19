@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var x = '你好';
+        x = 1;
+    </script>
+</head>
+
+<body>
+    <h1>变量的数据类型</h1>
+    <p>js的变量数据类型是靠程序运行时等号右边来决定的
+        <p>js是动态语言，数据类型可以变化的</p>
+        <h2>简单数据类型</h2>
+        <p>Number , Boolean , String , Undefined , Null
+        </p>
+        <div class="Number">
+            <h3>Number 数字型</h3>
+            <h5>八进制 前写 0</h5>
+            var num1 = 010; （0）
+            <h5>十六进制 前面写 0x</h5>
+            <p></p>
+            var num2 = 0x9; （9）
+            <h5>二进制 前面写 0b</h5>
+            <p></p>
+            var num3 = 0b10; (2)
+            <h5>最大值</h5>
+            Number.MAX_VALVE
+            <h5>最小值</h5>
+            Number.MIN_VALVE
+            <h5>特殊值</h5>
+            Infinity 无穷大 <br> -Infinity 无穷小 <br> NaN 代表非数值（非数字的，包括字符串）
+            <h5>isNaN（）</h5>
+            如果是数字 返回false ，不是返回true
+        </div>
+        <div class="String">
+            <h3>字符串类型 String</h3>
+            <h5>单引号 或者是 双引号</h5>
+            var myname = 'nihao';
+            <br> 如果需要嵌套 就 外单内双 或者是 外双内单
+
+            <h4>转义字符 （写在单引号里面）</h4>
+            \n 换行 <br> \\ \ <br> \' ' <br> \" " <br> \t Tab <br> \b 空格
+            <h4>字符串的长度（参考Java）</h4>
+            <h5>使用length属性</h5>
+            <h4>字符串拼接（拼在一起一定会变成字符串）</h4>
+            <h5>'你好啊'+'！我叫周。'</h5>
+            + 数值相加 字符相连
+            <h4>字符串拼接加强</h4>
+            可以字符串里 + 变量 <br> '' + 变量 + ''
+        </div>
+        <div class="qt">
+            <h3>布尔型 Boolean</h3>
+            true (1) 真 <br> false (0) 假 <br> 加法运算当 1,0来看
+            <h3>Undefined</h3>
+            如果一个变量只声明未给值，就是'Undefined'
+            <br> Undefined + 数字 是 Nan
+            <br>和字符相连
+            <h3>Null 空值</h3>
+            Null + 数字 是 数字
+            <br>和字符相连
+        </div>
+        <div class="typeof">
+            <h3>使用typeof检测数据类型</h3>
+            var num =10 ; <br> typeof num 会返回number <br> 其他按规则来，除了 null <br> null会返回 object
+            <h3>prompt方法取过来的数值是字符型的</h3>
+            <h3>字面量</h3>
+            一眼就知道是什么类型的
+        </div>
+</body>
+
+</html>

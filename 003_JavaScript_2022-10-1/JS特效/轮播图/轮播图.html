@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+        }
+        .look {
+            position: relative;
+            margin: 0 auto;
+            margin-top:50px;
+            background:#ccc;
+            width: 420px;
+            height: 650px;
+            overflow: hidden;
+            list-style: none;
+        }
+        .img{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 800%;
+            height: 100%;
+        }
+        .img li{
+            float: left;
+            width: 420px;
+            height: 100%;
+            
+        }
+        .img li a img{
+            width: 100%;
+            height: 100%;
+        }
+        .but_L{
+            display: none;
+            position: absolute;
+            top: 50%;
+            transform: translate(0%,-50%) ;
+            background-color: black;
+            font-size: 45px;
+            /* 透明度 */
+            opacity: 0.3;
+            color: #fff;
+            z-index: 1;
+        }   
+        .but_R{
+            display: none;
+            position: absolute;
+            right: 0px;
+            top: 50%;
+            transform: translate(0%,-50%) ;
+            background-color: black;
+            font-size: 45px;
+            /* 透明度 */
+            opacity: 0.3;
+            color: #fff;
+            z-index: 1;
+        }
+        /* 该功能使用js实现了 */
+        /* .look:hover .display{
+            display: block;
+        } */
+        .buttonS{
+            position:absolute;
+            bottom: 10px;
+            left: 50%; 
+            transform: translate(-50%,0);  
+            z-index: 1;
+        }
+        .buttonS li{
+            float: left;
+            height: 15px;
+            width: 15px;
+            border-radius: 30px;
+            border: 2px solid black;
+            /* background-color: aqua; */
+            margin-left: 6px;
+            opacity: 0.5;
+        }
+        .aqua{
+            background-color: aqua;
+        }
+    </style>
+        <!-- 导入动画函数 -->
+    <!-- <script src="./dh.js"></script> -->
+    <script src="./index.js"></script>
+</head>
+<body>
+    <div class="look">
+        <ul class="img">
+            <li><a href=""><img src="./轮播图1.jpg" alt=""></a></li>
+            <li><a href=""><img src="./轮播图2.jpg" alt=""></a></li>
+            <li><a href=""><img src="./轮播图4.jpg" alt=""></a></li>
+            <li><a href=""><img src="./轮播图5.jpg" alt=""></a></li>
+            <li><a href=""><img src="./轮播图6.jpg" alt=""></a></li>
+            <li><a href=""><img src="./轮播图7.jpg" alt=""></a></li>
+            <li><a href=""><img src="./轮播图8.jpg" alt=""></a></li>
+        </ul>
+        <div class="but_L display"> ＜ </div>
+        <div class="but_R display"> ＞ </div>
+        <ul class="buttonS">
+
+        </ul>
+    </div>
+</body>
+</html>

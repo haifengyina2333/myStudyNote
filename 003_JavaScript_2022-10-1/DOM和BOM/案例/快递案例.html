@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .big{
+            display: none;
+            height: 40px;
+            width: 100px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="big"></div>
+        <input type="text" name="" id="">
+        <script>
+            var big = document.querySelector('.big');
+            var ipu = document.querySelector('input');
+// 快递单号输入内容时，上面的大号字体盒子（big）显示(这里面的文字
+// 同时把快递单号里面的值（value）获取过来赋值给big盒子(innerText）做为内容
+// 如果快递单号里面内容为空，则隐藏大号字体盒子(big)盒子
+
+// 注意：keydown和keypress在文本框里面的特点：他们两个事件触发的时候，文字还没有落入文本框中。
+// keyup事件触发的时候，文字已经落入文本框里面了
+// 当我们失去焦点，就隐藏这个con盒子
+// 当我们获得焦点，并且文本框内容不为空，就显示这个con盒子
+            ipu.addEventListener('keyup',function(e){
+                if(this.value == ''){
+                big.style.display = 'none';
+            }else {
+                big.innerHTML = ipu.value;
+                big.style.display = 'block';
+            }
+            })
+            // 失去焦点，隐藏放大的
+            ipu.addEventListener('blur',function(){
+                big.style.display = 'none';
+            })
+            // 获取了焦点，显示放大字体
+            ipu.addEventListener('focus',function(){
+                if(ipu.value != ''){
+                big.style.display = 'block';
+                }
+            })
+        </script>
+    </div>
+</body>
+</html>

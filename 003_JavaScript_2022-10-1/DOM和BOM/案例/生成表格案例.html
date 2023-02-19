@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html{
+            background-color: #CCC;
+        }
+        table{
+            margin: 200px auto;
+            margin-bottom: 0px;
+        
+        }
+        table thead{
+            background-color: #66ccff;
+            border: 2px solid #ec4e8a;
+            height: 40px;
+            font-size: 20px;
+        }
+        table td{
+            background-color: #66ccff;
+            
+        }
+        table th{
+            background-color: #66ccff;
+        }
+        table th{
+            width: 100px;
+        }
+        table th:nth-child(1){
+            width: 140px;
+        }
+        table th:nth-child(2){
+            width: 175px;
+        }
+       table tr {
+            text-align: center;
+       }
+       td{
+        border: 1px solid #ec4e8a;
+       }
+       th{
+        border: 1px solid #ec4e8a;
+       }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>科目</th>
+                <th>成绩</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+          
+    
+        </tbody>
+    </table>
+   <script>
+   
+   
+    var datas = [{
+        name:'我是狗',
+        subject:'JavaScript',
+        score:100
+    },{
+        name:'我是猫',
+        subject:'JavaScript',
+        score:82
+    },{
+        name:'我是傻逼',
+         subject:'JavaScript',
+        score:60},
+        {
+        name:'傻逼',
+         subject:'JavaScript',
+        score:91}];
+    // 2. tbody里面创行
+    // var tbody = document.getElementsByTagName('tbody');
+    var tbody = document.querySelector('tbody');
+    for(var i = 0 ; i <datas.length;i++){
+        // 创造行
+        var tr = document.createElement('tr')
+        tbody.appendChild(tr);
+        // 创造列
+        for(var k in datas[i]){
+          var td = document.createElement('td');
+          td.innerHTML = datas[i][k];
+          tr.appendChild(td);
+        }
+        // 创造删除单原格
+        var td = document.createElement('td');
+        td.innerHTML = '<a href="javascript:;">删除</a>'
+        tr.appendChild(td);
+    }
+    // 4.删除操作
+    var as = document.querySelectorAll('a');
+    for(var i = 0; i < as.length;i++){
+        as[i].onclick = function(){
+            tbody.removeChild(this.parentNode.parentNode);        }
+    }
+
+   </script>
+    
+</body>
+</html>

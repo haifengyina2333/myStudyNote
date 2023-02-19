@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    //不好使
+        var computer = {
+            color:'红色',
+            kg:2,
+            logo:'dell',
+            mover:function(){
+                console.log('我在看电影');
+                alert('我在看电影');
+            
+            },
+            music:function(){
+                console.log('我在听音乐');
+            },
+            game:function(){
+                console.log("我在打游戏");
+            },
+            code:function(){
+                console.log("我在写代码");
+            }
+        }
+
+        
+        var button = new Object();
+        button.h = '100px';
+        button.w = '50px';
+        button.bgc = '蓝色';
+        button.ok =function(){
+            console.log('你妈死');
+        }
+
+         function car(){
+            this.kg = 100;
+            this.color = 'red';
+            this.number = 'D4321A';
+            this.run = function(){
+                console.log('我可以跑路');
+            }
+            this.go = function(){
+                console.log('我可以拉拉拉');
+            }
+         }
+
+computer.music();
+computer.mover();
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

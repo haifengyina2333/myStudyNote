@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 300px;
+            width: 600px;
+            background-color: skyblue;
+            margin: 400px auto;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        var div = document.querySelector('div');
+        // 鼠标开始拖
+        div.addEventListener('mousedown',function(e){
+            // 获取鼠标的位置
+            var x = e.pageX - this.offsetLeft;
+            var y = e.pageY - this.offsetTop;
+            // 鼠标移动时，把鼠标在页面中的坐标 - 鼠标在盒子里面的坐标
+            div.addEventListener('mousemove',move)
+            function move(e){
+                div.style.marginLeft = e.pageX - x + 'px';
+                div.style.marginTop = e.pageY - y + 'px';
+            }
+            //当鼠标放开 移除上面的事件
+            div.addEventListener('mouseup',function(){
+                div.removeEventListener('mousemove',move)
+            })
+        })
+    </script>
+</body>
+</html>

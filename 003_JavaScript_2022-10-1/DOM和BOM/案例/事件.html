@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btm">我是一个大傻逼</button>
+    <script>
+        var btm = document.getElementById('btm');
+        btm.onclick = function(){
+           if( prompt('你是傻逼吗？') == '是'){
+            alert('不愧是你呢 ，傻逼！');
+           }else {
+            alert('骗人是不好的');
+           }
+
+        }
+        
+    </script>
+</body>
+</html>

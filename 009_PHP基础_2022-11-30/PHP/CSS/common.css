@@ -1,0 +1,158 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background: url(../img/index.png) fixed 0 / cover;
+  overflow: hidden;
+}
+.header {
+  height: 42px;
+  background-color: skyblue;
+}
+.header ul li a {
+  color: black;
+  font-size: 20px;
+  line-height: 20px;
+}
+.CoreContent {
+  width: 90vw;
+  height: 80vh;
+  background-color: rgba(135, 206, 235, 0.6);
+  margin-top: 30px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  backdrop-filter: blur(20px);
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+.CoreContent h2 {
+  font-size: 40px;
+}
+.CoreContent table {
+  display: block;
+  width: 70vw;
+  border-collapse: collapse;
+  margin-top: 40px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  overflow: hidden;
+  padding: 20px;
+}
+.CoreContent table .thead {
+  height: 50px;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.8);
+  font-size: 20px;
+}
+.CoreContent table .thead .one {
+  text-align: center;
+  width: 160px;
+}
+.CoreContent table .thead .two {
+  width: 50%;
+  overflow: hidden;
+}
+.CoreContent table .table_body {
+  font-size: 16px;
+  height: 48px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+}
+.CoreContent table .table_body:last-child {
+  border-bottom: 0px solid rgba(0, 0, 0, 0.4);
+}
+.CoreContent table .table_body td {
+  text-align: center;
+  height: 48px;
+}
+.CoreContent table .table_body td a {
+  color: #428675;
+}
+.CoreContent table .table_body td a:last-child {
+  color: red;
+}
+.CoreContent table .table_body:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.CoreContent .go {
+  display: inline-block;
+  margin-top: 20px;
+  margin: 20px 30px 8px;
+  height: 40px;
+  width: 100px;
+  background-color: rgba(255, 255, 255, 0.3);
+  line-height: 40px;
+  color: black;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  transition: all 0.2s;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+}
+.CoreContent .go:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.CoreContent .Delete {
+  font-size: 20px;
+}
+.CoreContent .Delete input {
+  width: 350px;
+  margin-top: 18px;
+  height: 45px;
+  font-size: 22px;
+  padding-left: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.CoreContent .Delete input:last-child {
+  border: 2px black solid;
+  transition: all 0.2s;
+}
+.CoreContent .Delete input:last-child:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: skyblue;
+}
+.CoreContent .modify {
+  font-size: 26px;
+}
+.CoreContent .modify input {
+  width: 300px;
+  margin-top: 40px;
+  height: 50px;
+  font-size: 26px;
+  padding-left: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.CoreContent .modify input:last-child {
+  border: 2px black solid;
+  transition: all 0.2s;
+}
+.CoreContent .modify input:last-child:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: skyblue;
+}
+.CoreContent .modify textarea {
+  width: 550px;
+  height: 180px;
+  margin-top: 30px;
+  font-size: 16px;
+  padding: 10px 10px 5px 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 35px;
+  background-color: rgba(135, 206, 235, 0.8);
+  backdrop-filter: blur(30px);
+  filter: contrast(1.2);
+  text-align: center;
+  color: black;
+  line-height: 35px;
+  font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  font-weight: 600;
+}
